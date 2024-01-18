@@ -1,3 +1,13 @@
+* Each transaction carried out in the system must ONLY contain the following information:
+   1) Transaction Date (Date)
+   2) Transaction Type (Deposit, Transfer, Bill Payment)
+   3) Transaction Value (value greater than zero)
+
+* Whenever the transaction is of the DEPOSIT type, the transaction amount must be added to the account balance.
+* Whenever the transaction is of the TRANSFER or BILL PAYMENT type, the transaction amount must be subtracted from the account balance.
+* The balance must always be updated on the application screen with each transaction carried out.
+
+
 * Cada transação realizada no sistema deve possuir SOMENTE as seguintes informações:
   1) Data da Transação (Date)
   2) Tipo de Transação (Depósito, Transferência, Pagamento de Boleto)
