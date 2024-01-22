@@ -1,4 +1,4 @@
-let saldo = 2000;
+let saldo = 3000;
 const elementoSaldo = document.querySelector(".saldo-valor .valor");
 elementoSaldo.textContent = saldo;
 
@@ -19,7 +19,7 @@ elementoFormulario.addEventListener("submit", function (event) {
   let data = inputData.value;
 
   if (tipoTransacao == "Deposit") {
-    saldo += valor;
+    saldo += Number(valor);
   } else if (tipoTransacao == "Transfer" || tipoTransacao == "Bill Payment") {
     saldo -= valor;
   } else {
