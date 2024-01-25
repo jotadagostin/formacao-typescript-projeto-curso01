@@ -1,8 +1,8 @@
-let saldo = 3000;
+let saldo: number  = 3000;
 
 const elementoSaldo = document.querySelector(
   ".saldo-valor .valor"
 ) as HTMLElement;
-if (elementoSaldo1 != null) {
-  elementoSaldo1.textContent = elementoSaldo1.toString();
+if (elementoSaldo != null) {
+  elementoSaldo.textContent = elementoSaldo.toLocaleString("pt-br", {currency, "BRL", style: "currency"});
 }
