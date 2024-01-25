@@ -1,30 +1,20 @@
-let saldo1 = 3000;
-
-alert("teste");
-const elementoSaldo1 = document.querySelector(
-  ".saldo-valor .valor"
-) as HTMLElement;
-if (elementoSaldo != null) {
-  elementoSaldo.textContent = saldo.toString();
-}
-
-const elementoFormulario1 = document.querySelector(
+const elementoFormulario = document.querySelector(
   ".block-nova-transacao form"
 ) as HTMLFormElement;
-elementoFormulario1.addEventListener("submit", function (event) {
+elementoFormulario.addEventListener("submit", function (event) {
   event.preventDefault();
-  if (!elementoFormulario1.checkValidity()) {
+  if (!elementoFormulario.checkValidity()) {
     alert("Please, fill all the fields!");
     return;
   }
 
-  const inputTipoTransacao = elementoFormulario1.querySelector(
+  const inputTipoTransacao = elementoFormulario.querySelector(
     "#tipoTransacao"
   ) as HTMLSelectElement;
-  const inputValor = elementoFormulario1.querySelector(
+  const inputValor = elementoFormulario.querySelector(
     "#valor"
   ) as HTMLInputElement;
-  const inputData = elementoFormulario1.querySelector(
+  const inputData = elementoFormulario.querySelector(
     "#data"
   ) as HTMLInputElement;
 
@@ -33,15 +23,15 @@ elementoFormulario1.addEventListener("submit", function (event) {
   let data: Date = new Date(inputData.value);
 
   if (tipoTransacao == "Deposit") {
-    saldo += valor;
+    saldo1 += valor;
   } else if (tipoTransacao == "Transfer" || tipoTransacao == "Bill Payment") {
-    saldo -= valor;
+    saldo1 -= valor;
   } else {
     alert("Transfer type invalid");
     return;
   }
 
-  elementoSaldo1.textContent = saldo.toString();
+  elementoSaldo.textContent = saldo1.toString();
 
   const novaTransacaoo = {
     tipoTransacao: tipoTransacao,
@@ -50,5 +40,5 @@ elementoFormulario1.addEventListener("submit", function (event) {
   };
 
   console.log(novaTransacaoo);
-  elementoFormulario1.reset();
+  elementoFormulario.reset();
 });
