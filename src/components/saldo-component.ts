@@ -1,3 +1,6 @@
+import { formatarData, formatarMoeda } from "../utils/formarters.js";
+import { FormatoData } from "../types/FormatoData.js";
+
 let saldo: number = 3000;
 
 const elementoSaldo = document.querySelector(
@@ -15,6 +18,6 @@ if (elementoDataAcesso != null) {
   const dataAcesso: Date = new Date();
   elementoDataAcesso.textContent = formatarData(
     dataAcesso,
-    formatarData.DIA_SEMANA_MES_ANO
+    FormatoData.DIA_SEMANA_DIA_MES_ANO
   );
 }
