@@ -16,3 +16,15 @@
 * Sempre que a transação for do tipo DEPÓSITO, o valor da transação deve ser adicionado ao saldo da conta.
 * Sempre que a transação for do tipo TRANSFERÊNCIA ou PAGAMENTO DE BOLETO, o valor da transação deve ser subtraído do saldo da conta.
 * O saldo deve sempre ser atualizado na tela da aplicação a cada transação realizada.
+
+---------------------------------------------------------------
+
+* As informações da conta devem ficar num modulo especifico "conta"
+-saldo
+-data de acesso
+-registro de transacoes realizadas
+-historico de transacoes
+
+*Os componentes
+-Nova Transacao: deve apenas coletar as informacoes do form da interface e repassar os dados para o modulo conta
+-Saldo: deve exibir as informacoes de data de acesso e do saldo para o usuario na interface. Acessando esses dados atraves do modulo conta
