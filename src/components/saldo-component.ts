@@ -1,7 +1,6 @@
 import { formatarData, formatarMoeda } from "../utils/formarters.js";
 import { FormatoData } from "../types/FormatoData.js";
-
-let saldo: number = 3000;
+import Conta from "../types/Conta.js";
 
 const elementoSaldo = document.querySelector(
   ".saldo-valor .valor"
@@ -14,21 +13,24 @@ const elementoDataAcesso = document.querySelector(
 if (elementoDataAcesso != null) {
   const dataAcesso: Date = new Date();
   elementoDataAcesso.textContent = formatarData(
-    dataAcesso,
+    Conta.getDataAcesso(),
     FormatoData.DIA_SEMANA_DIA_MES_ANO
   );
 }
 
-export function getSaldo(): number {
-  return saldo;
-}
+renderizarSaldo();
 
-atualizarSaldo(saldo);
-
-export function atualizarSaldo(novoSaldo: number): void {
-  saldo = novoSaldo;
+function renderizarSaldo(): void {
   if (elementoSaldo != null) {
-    elementoSaldo.textContent = formatarMoeda(saldo);
+    elementoSaldo.textContent = formatarMoeda(Conta.getSaldo());
   }
 }
 //void para retornar vazio sem valor
+
+const SaldoComponent = {
+  atualizar() {
+    renderizarSaldo();
+  },
+};
+
+export default SaldoComponent;
