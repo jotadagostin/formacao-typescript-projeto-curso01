@@ -10,6 +10,8 @@ const transacoes: Transacao[] =
       if (key === "data") {
         return new Date(value);
       }
+
+      return value;
     }
   ) || [];
 
