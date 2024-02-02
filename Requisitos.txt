@@ -1,13 +1,3 @@
-* Each transaction carried out in the system must ONLY contain the following information:
-   1) Transaction Date (Date)
-   2) Transaction Type (Deposit, Transfer, Bill Payment)
-   3) Transaction Value (value greater than zero)
-
-* Whenever the transaction is of the DEPOSIT type, the transaction amount must be added to the account balance.
-* Whenever the transaction is of the TRANSFER or BILL PAYMENT type, the transaction amount must be subtracted from the account balance.
-* The balance must always be updated on the application screen with each transaction carried out.
-
-
 * Cada transação realizada no sistema deve possuir SOMENTE as seguintes informações:
   1) Data da Transação (Date)
   2) Tipo de Transação (Depósito, Transferência, Pagamento de Boleto)
@@ -17,14 +7,14 @@
 * Sempre que a transação for do tipo TRANSFERÊNCIA ou PAGAMENTO DE BOLETO, o valor da transação deve ser subtraído do saldo da conta.
 * O saldo deve sempre ser atualizado na tela da aplicação a cada transação realizada.
 
----------------------------------------------------------------
+---------------------------------------------
 
-* As informações da conta devem ficar num modulo especifico "conta"
--saldo
--data de acesso
--registro de transacoes realizadas
--historico de transacoes
+* As informações da conta devem ficar num módulo específico "Conta"
+- Saldo 
+- Data de Acesso 
+- Registro de Transações realizadas
+- Histórico de transações 
 
-*Os componentes
--Nova Transacao: deve apenas coletar as informacoes do form da interface e repassar os dados para o modulo conta
--Saldo: deve exibir as informacoes de data de acesso e do saldo para o usuario na interface. Acessando esses dados atraves do modulo conta
+* Os componentes
+  - Nova transação: deve apenas coletar as informações do form da interface e repassar os dados para o módulo Conta 
+  - Saldo: deve exibir as informações de data de acesso e do saldo para o usuário na interface acessando esses dados através do módulo Conta 

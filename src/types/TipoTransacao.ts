@@ -1,5 +1,5 @@
 export enum TipoTransacao {
-  DEPOSIT = "Deposit",
-  TRANSFER = "Transfer",
-  PAYMENT_BILL = "Payment Bill",
+    DEPOSITO = "Depósito",
+    TRANSFERENCIA = "Transferência",
+    PAGAMENTO_BOLETO = "Pagamento de Boleto"
 }
